@@ -1,4 +1,6 @@
-from tensorflow.keras import layers, models
+import tensorflow as tf
+from keras import models, layers
+from model.evaluation.metrics import SparsePrecision, SparseRecall
 
 
 def apply_cnn(train_ds):
@@ -16,7 +18,13 @@ def apply_cnn(train_ds):
 
     # Compile
     model.compile(
-        optimizer="adam", loss="sparse_categorical_crossentropy", metrics=["accuracy"]
+        optimizer="adam",
+        loss="sparse_categorical_crossentropy",
+        metrics=[
+            "accuracy",
+            SparseRecall(name="recall"),
+            SparsePrecision(name="precision"),
+        ],
     )
 
     model.summary()

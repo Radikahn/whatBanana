@@ -11,8 +11,8 @@ def setup():
     cnn_model = apply_cnn(train_ds)
     fit_cnn(cnn_model, train_ds, val_ds)
 
-    rnn_model = apply_rnn(train_ds)
-    fit_rnn(rnn_model, train_ds, val_ds)
+    # rnn_model = apply_rnn(train_ds)
+    # fit_rnn(rnn_model, train_ds, val_ds)
 
 
 def main():

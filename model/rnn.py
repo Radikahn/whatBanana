@@ -1,4 +1,5 @@
-from tensorflow.keras import layers, models
+import tensorflow as tf
+from keras import layers, models
 
 
 def apply_rnn(train_ds):
@@ -14,7 +15,8 @@ def apply_rnn(train_ds):
 
     # Compile
     model.compile(
-        optimizer="adam", loss="sparse_categorical_crossentropy", metrics=["accuracy"]
+        optimizer="adam",
+        loss="sparse_categorical_crossentropy",
     )
 
     model.summary()
