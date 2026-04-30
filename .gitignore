@@ -13,3 +13,6 @@ uv.lock
 
 # Data files
 Banana Ripeness Classification Dataset/
+
+#Model files
+*.keras
