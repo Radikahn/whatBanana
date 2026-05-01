@@ -40,7 +40,7 @@ def fit_cnn(model, train_ds, val_ds):
 
     early_stop = EarlyStopping(
         monitor="val_loss", 
-        patience=1, 
+        patience=5, 
         restore_best_weights=True
     )
     
@@ -50,9 +50,11 @@ def fit_cnn(model, train_ds, val_ds):
         save_best_only=True,
     )
 
-    model.fit(
+    history = model.fit(
         train_ds, 
         validation_data=val_ds, 
-        epochs=4,
+        epochs=30,
         callbacks=[early_stop, checkpoint],
     )
+    
+    return history
