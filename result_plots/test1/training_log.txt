@@ -1,0 +1,47 @@
+Epoch 1/30
+369/369 ━━━━━━━━━━━━━━━━━━━━ 132s 356ms/step - F1-score: 0.7022 - accuracy: 0.6966 - loss: 1.6931 - precision: 0.6966 - recall: 0.6966 - val_F1-score: 0.8658 - val_accuracy: 0.8575 - val_loss: 0.4107 - val_precision: 0.8575 - val_recall: 0.8575
+Epoch 2/30
+369/369 ━━━━━━━━━━━━━━━━━━━━ 128s 348ms/step - F1-score: 0.8537 - accuracy: 0.8459 - loss: 0.4094 - precision: 0.8459 - recall: 0.8459 - val_F1-score: 0.9075 - val_accuracy: 0.9029 - val_loss: 0.3086 - val_precision: 0.9029 - val_recall: 0.9029
+Epoch 3/30
+369/369 ━━━━━━━━━━━━━━━━━━━━ 130s 352ms/step - F1-score: 0.8900 - accuracy: 0.8837 - loss: 0.3142 - precision: 0.8837 - recall: 0.8837 - val_F1-score: 0.8834 - val_accuracy: 0.8700 - val_loss: 0.3342 - val_precision: 0.8700 - val_recall: 0.8700
+Epoch 4/30
+369/369 ━━━━━━━━━━━━━━━━━━━━ 130s 352ms/step - F1-score: 0.9153 - accuracy: 0.9096 - loss: 0.2538 - precision: 0.9096 - recall: 0.9096 - val_F1-score: 0.9040 - val_accuracy: 0.8958 - val_loss: 0.3006 - val_precision: 0.8958 - val_recall: 0.8958
+Epoch 5/30
+369/369 ━━━━━━━━━━━━━━━━━━━━ 131s 354ms/step - F1-score: 0.9330 - accuracy: 0.9288 - loss: 0.1978 - precision: 0.9288 - recall: 0.9288 - val_F1-score: 0.9157 - val_accuracy: 0.9118 - val_loss: 0.2812 - val_precision: 0.9118 - val_recall: 0.9118
+Epoch 6/30
+369/369 ━━━━━━━━━━━━━━━━━━━━ 129s 351ms/step - F1-score: 0.9479 - accuracy: 0.9443 - loss: 0.1553 - precision: 0.9443 - recall: 0.9443 - val_F1-score: 0.9009 - val_accuracy: 0.8949 - val_loss: 0.2768 - val_precision: 0.8949 - val_recall: 0.8949
+Epoch 7/30
+369/369 ━━━━━━━━━━━━━━━━━━━━ 128s 347ms/step - F1-score: 0.9582 - accuracy: 0.9552 - loss: 0.1255 - precision: 0.9552 - recall: 0.9552 - val_F1-score: 0.9110 - val_accuracy: 0.9074 - val_loss: 0.3179 - val_precision: 0.9074 - val_recall: 0.9074
+Epoch 8/30
+369/369 ━━━━━━━━━━━━━━━━━━━━ 128s 346ms/step - F1-score: 0.9701 - accuracy: 0.9679 - loss: 0.0955 - precision: 0.9679 - recall: 0.9679 - val_F1-score: 0.9050 - val_accuracy: 0.9003 - val_loss: 0.2985 - val_precision: 0.9003 - val_recall: 0.9003
+Epoch 9/30
+369/369 ━━━━━━━━━━━━━━━━━━━━ 128s 348ms/step - F1-score: 0.9756 - accuracy: 0.9739 - loss: 0.0786 - precision: 0.9739 - recall: 0.9739 - val_F1-score: 0.9078 - val_accuracy: 0.9029 - val_loss: 0.3389 - val_precision: 0.9029 - val_recall: 0.9029
+Epoch 10/30
+369/369 ━━━━━━━━━━━━━━━━━━━━ 130s 353ms/step - F1-score: 0.9776 - accuracy: 0.9760 - loss: 0.0689 - precision: 0.9760 - recall: 0.9760 - val_F1-score: 0.9238 - val_accuracy: 0.9190 - val_loss: 0.2632 - val_precision: 0.9190 - val_recall: 0.9190
+Epoch 11/30
+369/369 ━━━━━━━━━━━━━━━━━━━━ 129s 348ms/step - F1-score: 0.9801 - accuracy: 0.9788 - loss: 0.0612 - precision: 0.9788 - recall: 0.9788 - val_F1-score: 0.9136 - val_accuracy: 0.9101 - val_loss: 0.4049 - val_precision: 0.9101 - val_recall: 0.9101
+Epoch 12/30
+369/369 ━━━━━━━━━━━━━━━━━━━━ 132s 358ms/step - F1-score: 0.9833 - accuracy: 0.9826 - loss: 0.0544 - precision: 0.9826 - recall: 0.9826 - val_F1-score: 0.8977 - val_accuracy: 0.8931 - val_loss: 0.4262 - val_precision: 0.8931 - val_recall: 0.8931
+Epoch 13/30
+369/369 ━━━━━━━━━━━━━━━━━━━━ 130s 351ms/step - F1-score: 0.9841 - accuracy: 0.9836 - loss: 0.0479 - precision: 0.9836 - recall: 0.9836 - val_F1-score: 0.9143 - val_accuracy: 0.9092 - val_loss: 0.3557 - val_precision: 0.9092 - val_recall: 0.9092
+Epoch 14/30
+369/369 ━━━━━━━━━━━━━━━━━━━━ 130s 351ms/step - F1-score: 0.9886 - accuracy: 0.9879 - loss: 0.0386 - precision: 0.9879 - recall: 0.9879 - val_F1-score: 0.9292 - val_accuracy: 0.9261 - val_loss: 0.2916 - val_precision: 0.9261 - val_recall: 0.9261
+Epoch 15/30
+369/369 ━━━━━━━━━━━━━━━━━━━━ 131s 354ms/step - F1-score: 0.9865 - accuracy: 0.9860 - loss: 0.0434 - precision: 0.9860 - recall: 0.9860 - val_F1-score: 0.9274 - val_accuracy: 0.9234 - val_loss: 0.3057 - val_precision: 0.9234 - val_recall: 0.9234
+
+Evaluating on test dataset...
+18/18 ━━━━━━━━━━━━━━━━━━━━ 2s 70ms/step - F1-score: 0.9323 - accuracy: 0.9306 - loss: 0.2458 - precision: 0.9306 - recall: 0.9306 
+loss: 0.24578694999217987
+compile_metrics: 0.9306049942970276
+
+Classification Report:
+              precision    recall  f1-score   support
+
+    overripe       0.94      0.88      0.91       113
+        ripe       0.97      0.92      0.94       154
+      rotten       0.87      0.97      0.92       185
+      unripe       0.98      0.95      0.96       110
+
+    accuracy                           0.93       562
+   macro avg       0.94      0.93      0.93       562
+weighted avg       0.93      0.93      0.93       562
