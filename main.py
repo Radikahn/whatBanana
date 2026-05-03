@@ -18,6 +18,7 @@ def plot_history(history):
     plt.title("CNN Training vs Validation Loss")
     plt.legend()
     plt.tight_layout()
+    plt.savefig("loss_history.png")
     plt.show()
 
     # Plot training & Validation Accuracy
@@ -29,6 +30,7 @@ def plot_history(history):
     plt.title("CNN Training vs Validation Accuracy")
     plt.legend()
     plt.tight_layout()
+    plt.savefig("accuracy_history.png")
     plt.show()
 
 def setup():

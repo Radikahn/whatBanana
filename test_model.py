@@ -50,4 +50,5 @@ disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=test_ds.class_
 disp.plot(cmap="Blues", xticks_rotation=45)
 plt.title("Confusion Matrix")
 plt.tight_layout()
+plt.savefig("confusion_matrix.png")
 plt.show()
