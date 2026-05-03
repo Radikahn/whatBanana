@@ -7,7 +7,7 @@ from model.rnn import apply_rnn, fit_rnn
 from model.resnet50 import apply_resnet, fit_resnet
 
 
-def plot_history(history):
+def plot_history(history, model_name):
 
     # Plot training & Validation Loss
     plt.figure()
@@ -15,10 +15,10 @@ def plot_history(history):
     plt.plot(history.history["val_loss"], label="val_loss")
     plt.xlabel("Epoch")
     plt.ylabel("Loss")
-    plt.title("CNN Training vs Validation Loss")
+    plt.title(f"{model_name} Training vs Validation Loss")
     plt.legend()
     plt.tight_layout()
-    plt.savefig("loss_history.png")
+    plt.savefig(f"{model_name.lower()}_loss_history.png")
     plt.show()
 
     # Plot training & Validation Accuracy
@@ -27,10 +27,10 @@ def plot_history(history):
     plt.plot(history.history["val_accuracy"], label="val_accuracy")
     plt.xlabel("Epoch")
     plt.ylabel("Accuracy")
-    plt.title("CNN Training vs Validation Accuracy")
+    plt.title(f"{model_name} Training vs Validation Accuracy")
     plt.legend()
     plt.tight_layout()
-    plt.savefig("accuracy_history.png")
+    plt.savefig(f"{model_name.lower()}_accuracy_history.png")
     plt.show()
 
 def setup():
@@ -40,13 +40,13 @@ def setup():
     print("Custom CNN Testing:")
     cnn_model = apply_cnn(train_ds)
     cnn_history = fit_cnn(cnn_model, train_ds, val_ds)
-    plot_history(cnn_history)
+    plot_history(cnn_history, "CNN")
 
     #ResNet50
     print("ResNet50 Testing")
     resnet_model = apply_resnet(train_ds)
     resnet_history = fit_resnet(resnet_model, train_ds, val_ds)
-    plot_history(resnet_history)
+    plot_history(resnet_history, "ResNet50")
 
     # rnn_model = apply_rnn(train_ds)
     # fit_rnn(rnn_model, train_ds, val_ds)
