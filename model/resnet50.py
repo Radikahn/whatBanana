@@ -25,7 +25,7 @@ def apply_resnet(train_ds):
 
     outputs = layers.Dense(len(train_ds.class_names), activation="softmax")(x)
 
-    model = models.Model(input, outputs)
+    model = models.Model(inputs, outputs)
 
     model.compile(
         optimizer="adam",
