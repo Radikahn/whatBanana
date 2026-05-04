@@ -54,3 +54,51 @@ def test_model(model_name, model_path):
     plt.tight_layout()
     plt.savefig(f"{model_name}_confusion_matrix.png")
     plt.show()
+
+    # Sample correct and incorrect predictions
+
+    print("\nGenerating sample prediction visualizations...")
+    class_names = test_ds.class_names
+    images = np.concatenate([x for x, _ in test_ds], axis=0)
+
+    correct_idx = np.where(pred_labels == true_labels)[0]
+    incorrect_idx = np.where(pred_labels != true_labels)[0]
+
+    correct_samples = []
+    for c in range(len(class_names)):
+        matches = correct_idx[true_labels[correct_idx] == c]
+        if len(matches) > 0:
+            correct_samples.append(matches[0])
+
+    incorrect_samples = list(incorrect_idx[:4])
+
+    number_cols = max(len(correct_samples), len(incorrect_samples))
+
+    fig, axes = plt.subplots(2, number_cols, figsize=(number_cols * 3, 6))
+
+    for i, idx in enumerate(correct_samples):
+        ax = axes[0, i]
+        ax.imshow(images[idx].astype("uint8"))
+        ax.set_title(
+            f"True: {class_names[true_labels[idx]]}\nPred: {class_names[pred_labels[idx]]}",
+            color="green",
+        )
+        ax.axis("off")
+    for i in range(len(correct_samples), number_cols):
+        axes[0, i].axis("off")
+
+    for i, idx in enumerate(incorrect_samples):
+        ax = axes[1, i]
+        ax.imshow(images[idx].astype("uint8"))
+        ax.set_title(
+            f"True: {class_names[true_labels[idx]]}\nPred: {class_names[pred_labels[idx]]}",
+            color="red",
+        )
+        ax.axis("off")
+    for i in range(len(incorrect_samples), number_cols):
+        axes[1, i].axis("off")
+
+    fig.suptitle(f"{model_name} Sample Predictions (top: correct, bottom: incorrect)")
+    plt.tight_layout()
+    plt.savefig(f"{model_name}_sample_predictions.png")
+    plt.show()
