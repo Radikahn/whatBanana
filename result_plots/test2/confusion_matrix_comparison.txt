@@ -1,0 +1,24 @@
+Classification Report (CNN):
+              precision    recall  f1-score   support
+
+    overripe       0.95      0.94      0.95       113
+        ripe       0.93      0.96      0.94       154
+      rotten       0.94      0.92      0.93       185
+      unripe       0.95      0.95      0.95       110
+
+    accuracy                           0.94       562
+   macro avg       0.94      0.94      0.94       562
+weighted avg       0.94      0.94      0.94       562
+
+
+Classification Report (ResNet50):
+              precision    recall  f1-score   support
+
+    overripe       0.98      0.96      0.97       113
+        ripe       0.97      0.99      0.98       154
+      rotten       0.99      0.98      0.99       185
+      unripe       0.97      0.99      0.98       110
+
+    accuracy                           0.98       562
+   macro avg       0.98      0.98      0.98       562
+weighted avg       0.98      0.98      0.98       562
