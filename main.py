@@ -5,6 +5,7 @@ from loader.banana import init_data
 from model.cnn import apply_cnn, fit_cnn
 from model.rnn import apply_rnn, fit_rnn
 from model.resnet50 import apply_resnet, fit_resnet
+from test_model import test_model
 
 
 def plot_history(history, model_name):
@@ -48,9 +49,6 @@ def setup():
     resnet_history = fit_resnet(resnet_model, train_ds, val_ds)
     plot_history(resnet_history, "ResNet50")
 
-    # rnn_model = apply_rnn(train_ds)
-    # fit_rnn(rnn_model, train_ds, val_ds)
-
     return cnn_model, resnet_model, test_ds
 
 
@@ -58,6 +56,11 @@ def main():
     print("Hello from banana!")
     cnn_model, resnet_model, test_ds = setup()
     print("Banana setup complete!")
+
+    # Test CNN
+    test_model("CNN", "best_cnn_model.keras")
+    # Test ResNet50
+    test_model("ResNet50", "best_resnet_model.keras")
 
 
 if __name__ == "__main__":
