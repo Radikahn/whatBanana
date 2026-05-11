@@ -7,19 +7,22 @@ from model.evaluation.metrics import SparsePrecision, SparseRecall, SparseF1Scor
 def apply_cnn(train_ds):
     model = models.Sequential(
         [
+            # input layer and pixel normalization
             layers.Input(shape=(224, 224, 3)),
             layers.Rescaling(1.0 / 255),
 
+            # convolution and pooling
             layers.Conv2D(32, 3, activation="relu"),
             layers.MaxPooling2D(),
 
+            # classifier head
             layers.Flatten(),
             layers.Dense(64, activation="relu"),
             layers.Dense(len(train_ds.class_names), activation="softmax"),
         ]
     )
 
-    # Compile
+    # compile
     model.compile(
         optimizer="adam",
         loss="sparse_categorical_crossentropy",
@@ -38,23 +41,26 @@ def apply_cnn(train_ds):
 
 def fit_cnn(model, train_ds, val_ds):
 
+    # stop early when val loss stops improving
     early_stop = EarlyStopping(
-        monitor="val_loss", 
-        patience=5, 
+        monitor="val_loss",
+        patience=5,
         restore_best_weights=True
     )
-    
+
+    # save best model by val loss
     checkpoint = ModelCheckpoint(
         'best_cnn_model.keras',
         monitor='val_loss',
         save_best_only=True,
     )
 
+    # train
     history = model.fit(
-        train_ds, 
-        validation_data=val_ds, 
+        train_ds,
+        validation_data=val_ds,
         epochs=30,
         callbacks=[early_stop, checkpoint],
     )
-    
+
     return history
